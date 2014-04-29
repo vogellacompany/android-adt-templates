@@ -5,7 +5,7 @@ A template for a simple Android Hello world application. After download copy the
 
 If you created a new Android project via File -> New -> Android Application Project you can select your new templates in the wizard.
 
-![ADT project wizard page](https://github.com/vogellacompany/android-adt-templates/raw/master/images/projectwiazrd.png "ADT project wizard page")
+![ADT project wizard page](https://github.com/vogellacompany/android-adt-templates/raw/master/images/projectwizard.png "ADT project wizard page")
 
 See [1] for the announcements of Roman Nurik of the feature
 
