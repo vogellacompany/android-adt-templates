@@ -34,8 +34,8 @@
 
     <!-- Use simple layout -->
 
-         <instantiate from="res/layout/activity_simple.xml.ftl"
-               to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
+    <instantiate from="res/layout/activity_simple.xml.ftl"
+                  to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
 
     <!-- Add activity code to add -->
     

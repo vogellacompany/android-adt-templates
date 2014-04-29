@@ -5,7 +5,7 @@
     name="Simple Blank Activity (vogella)"
     minApi="14"
     minBuildApi="14"
-    description="Creates a new blank activity without any extras like ActionBar, Fragments or Navigration.">
+    description="Creates a new blank activity without any extras like ActionBar, Fragments or Navigation.">
 
     <category value="Activities" />
 
@@ -26,6 +26,15 @@
         suggest="${activityToLayout(activityClass)}"
         default="activity_main"
         help="The name of the layout to create for the activity" />
+
+    <parameter
+        id="fragmentLayoutName"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="fragment_${classToResource(activityClass)}"
+        default="fragment_main"
+        help="The name of the layout to create for the activity's content fragment" />
 
     <parameter
         id="activityTitle"
@@ -50,6 +59,19 @@
         constraints="activity|exists|empty"
         default=""
         help="The hierarchical parent activity, used to provide a default implementation for the 'Up' button" />
+
+    <parameter
+        id="navType"
+        name="Navigation Type"
+        type="enum"
+        default="none"
+        help="The type of navigation to use for the activity" >
+        <option id="none" default="true">None</option>
+        <option id="pager">Swipe Views (ViewPager)</option>
+        <option id="tabs">Action Bar Tabs (with ViewPager)</option>
+        <option id="spinner">Action Bar Spinner</option>
+        <option id="drawer">Navigation Drawer</option>
+    </parameter>
 
     <parameter
         id="packageName"
